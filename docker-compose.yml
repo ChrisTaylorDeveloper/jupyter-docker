@@ -1,6 +1,6 @@
 services:
   jupyter:
-    image: jupyter/datascience-notebook:2023-08-19
+    image: jupyter/datascience-notebook
     ports:
       - ${JUPY_PORT}:8888
     volumes:
