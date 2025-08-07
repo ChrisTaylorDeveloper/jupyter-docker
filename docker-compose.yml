@@ -2,6 +2,8 @@ services:
 
   jupyter:
     image: quay.io/jupyter/datascience-notebook:2025-08-04
+    # See https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html#jupyter-server-options
+    command: "start-notebook.py --PasswordIdentityProvider.hashed_password='argon2:$$argon2id$$v=19$$m=10240,t=10,p=8$$JdAN3fe9J45NvK/EPuGCvA$$O/tbxglbwRpOFuBNTYrymAEH6370Q2z+eS1eF4GM6Do'"
     ports:
       - ${JUPY_PORT}:8888
     volumes:
